@@ -14,7 +14,7 @@ def CallBack(data):
     i = 0
     while i < n:
      k = data.transforms[i].fiducial_id
-     p = rospy.Publisher("edumip"+str(k)+"/pose", Pose, queue_size=10)
+     p = rospy.Publisher("/robot" + str(k) + "/edumip/pose", Pose, queue_size=3)
      msg.x = data.transforms[i].transform.translation.x 
      msg.y = data.transforms[i].transform.translation.y
      euler = euler_from_quaternion([data.transforms[i].transform.rotation.x, data.transforms[i].transform.rotation.y, data.transforms[i].transform.rotation.z, data.transforms[i].transform.rotation.w])

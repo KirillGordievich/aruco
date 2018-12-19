@@ -1,0 +1,7 @@
+<launch>
+
+    <machine name="bbb" address="192.168.0.104" env-loader="/home/ubuntu/catkin_ws/devel/env.sh" user="ubuntu" password="temppwd" />
+
+    <node machine="bbb" name="edumip_balance_ros_node" pkg="edumip_balance_ros" type="edumip_balance_ros" />
+
+</launch>
